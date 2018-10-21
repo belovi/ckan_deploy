@@ -124,4 +124,8 @@
     docker_container:
       name: jenkins
       state: started
-      restart: yes
+      restart: yes  
+    when: initial_setup
+  - name: Copy Jenkins config
+    shell: "chown -R vagrant /var/lib/docker/volumes/jenkins_home/_data"
+    when: initial_setup
