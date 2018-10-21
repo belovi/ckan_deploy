@@ -1,0 +1,89 @@
+[ckan_deploy] Running shell script
++ ansible-playbook /home/vagrant/ckan2.yml -i /home/vagrant/inventory
+
+PLAY [testlab] *****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [testlab]
+
+TASK [package cache update] ****************************************************
+ok: [testlab]
+
+TASK [package upgrade] *********************************************************
+ok: [testlab]
+
+TASK [install java8] ***********************************************************
+ok: [testlab]
+
+TASK [ensure that old versions of docker uninstalled] **************************
+ok: [testlab]
+
+TASK [ensure that required packages are installed] *****************************
+ok: [testlab]
+
+TASK [gpg key check] ***********************************************************
+ok: [testlab]
+
+TASK [add docker repo] *********************************************************
+ok: [testlab]
+
+TASK [install docker] **********************************************************
+ok: [testlab]
+
+TASK [install docker for python] ***********************************************
+ok: [testlab]
+
+TASK [install docker-compose] **************************************************
+ok: [testlab]
+
+TASK [Start and enable Docker service] *****************************************
+ok: [testlab]
+
+TASK [Ensure docker group exists] **********************************************
+ok: [testlab]
+
+TASK [Add the user to docker group] ********************************************
+ok: [testlab]
+
+TASK [Clone CKAN] **************************************************************
+ok: [testlab]
+
+TASK [Copying default envs from template] **************************************
+ok: [testlab]
+
+TASK [Start docker-compose] ****************************************************
+changed: [testlab]
+
+TASK [wait for ckan] ***********************************************************
+ok: [testlab]
+
+TASK [db initialize] ***********************************************************
+changed: [testlab]
+
+TASK [Check ckan config volume] ************************************************
+ok: [testlab]
+
+TASK [datapusher enable] *******************************************************
+ok: [testlab]
+
+TASK [add plugin] **************************************************************
+ok: [testlab]
+
+TASK [restart ckan container] **************************************************
+changed: [testlab]
+
+TASK [db initialize] ***********************************************************
+changed: [testlab]
+
+TASK [Start Jenkins in container] **********************************************
+ok: [testlab]
+
+TASK [wait for jenkins] ********************************************************
+ok: [testlab]
+
+TASK [Jenkins initial password (COPY IT)] **************************************
+changed: [testlab]
+
+PLAY RECAP *********************************************************************
+testlab                    : ok=27   changed=5    unreachable=0    failed=0   
+

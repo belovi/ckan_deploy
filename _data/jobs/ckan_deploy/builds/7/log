@@ -1,0 +1,147 @@
+Started by user [8mha:////4EhbfLRQDhxXXWdppAaj64L59DzQs9gBEuSMiE/NbF4yAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Checking out git https://github.com/walkrist/ckan_deploy.git into /var/jenkins_home/workspace/ckan_deploy@script to read ckan_deploy.jenkinsfile
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/walkrist/ckan_deploy.git # timeout=10
+Fetching upstream changes from https://github.com/walkrist/ckan_deploy.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/walkrist/ckan_deploy.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 0a2b97a4a1ed999ae4422f67d6d13a6d2a25d498 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 0a2b97a4a1ed999ae4422f67d6d13a6d2a25d498
+Commit message: "Add files via upload"
+First time build. Skipping changelog.
+Running in Durability level: MAX_SURVIVABILITY
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] node
+Running on [8mha:////4Lcx+M2GN7PnH0jtjfYDS8JyvacF5HxN+B/WvHW4Pc8TAAAAnR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAx2oBn6yfm5BaUlqUX6JanFJTmJSfoAAIApJ8cAAAA=[0mtestlab in /home/vagrant/workspace/ckan_deploy
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] {
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Declarative: Checkout SCM)
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] checkout
+Cloning the remote Git repository
+Cloning repository https://github.com/walkrist/ckan_deploy.git
+ > git init /home/vagrant/workspace/ckan_deploy # timeout=10
+Fetching upstream changes from https://github.com/walkrist/ckan_deploy.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/walkrist/ckan_deploy.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/walkrist/ckan_deploy.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/walkrist/ckan_deploy.git # timeout=10
+Fetching upstream changes from https://github.com/walkrist/ckan_deploy.git
+ > git fetch --tags --progress https://github.com/walkrist/ckan_deploy.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 0a2b97a4a1ed999ae4422f67d6d13a6d2a25d498 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 0a2b97a4a1ed999ae4422f67d6d13a6d2a25d498
+Commit message: "Add files via upload"
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] withEnv
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] {
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Deploy CKAN)
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] script
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] {
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[ckan_deploy] Running shell script
++ ansible-playbook /home/vagrant/ckan2.yml -i /home/vagrant/inventory
+
+PLAY [testlab] *****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [testlab]
+
+TASK [package cache update] ****************************************************
+ok: [testlab]
+
+TASK [package upgrade] *********************************************************
+ok: [testlab]
+
+TASK [install java8] ***********************************************************
+ok: [testlab]
+
+TASK [ensure that old versions of docker uninstalled] **************************
+ok: [testlab]
+
+TASK [ensure that required packages are installed] *****************************
+ok: [testlab]
+
+TASK [gpg key check] ***********************************************************
+ok: [testlab]
+
+TASK [add docker repo] *********************************************************
+ok: [testlab]
+
+TASK [install docker] **********************************************************
+ok: [testlab]
+
+TASK [install docker for python] ***********************************************
+ok: [testlab]
+
+TASK [install docker-compose] **************************************************
+ok: [testlab]
+
+TASK [Start and enable Docker service] *****************************************
+ok: [testlab]
+
+TASK [Ensure docker group exists] **********************************************
+ok: [testlab]
+
+TASK [Add the user to docker group] ********************************************
+ok: [testlab]
+
+TASK [Clone CKAN] **************************************************************
+ok: [testlab]
+
+TASK [Copying default envs from template] **************************************
+ok: [testlab]
+
+TASK [Start docker-compose] ****************************************************
+changed: [testlab]
+
+TASK [wait for ckan] ***********************************************************
+ok: [testlab]
+
+TASK [db initialize] ***********************************************************
+changed: [testlab]
+
+TASK [Check ckan config volume] ************************************************
+ok: [testlab]
+
+TASK [datapusher enable] *******************************************************
+ok: [testlab]
+
+TASK [add plugin] **************************************************************
+ok: [testlab]
+
+TASK [restart ckan container] **************************************************
+changed: [testlab]
+
+TASK [db initialize] ***********************************************************
+changed: [testlab]
+
+TASK [Start Jenkins in container] **********************************************
+ok: [testlab]
+
+TASK [wait for jenkins] ********************************************************
+ok: [testlab]
+
+TASK [Jenkins initial password (COPY IT)] **************************************
+changed: [testlab]
+
+PLAY RECAP *********************************************************************
+testlab                    : ok=27   changed=5    unreachable=0    failed=0   
+
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // script
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // withEnv
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // node
+[8mha:////4ML/Z6z6/rSwdwoBan6xmrWLMfpBOAbtEUvubn1cpnkPAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] End of Pipeline
+Finished: SUCCESS
