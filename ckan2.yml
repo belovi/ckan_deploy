@@ -1,0 +1,122 @@
+- hosts: testlab
+  vars:
+    ckan_dir: ./ckan
+    initial_setup: True
+  become: yes
+  tasks: 
+  - name: package cache update
+    apt:
+      update_cache: yes
+      cache_valid_time: 3600
+  - name: package upgrade
+    apt:
+      upgrade: dist
+  - name: install java8
+    apt:
+      name: default-jre
+      state: present
+  - name: ensure that old versions of docker uninstalled
+    apt:
+      name: ['docker', 'docker-engine']
+      state: absent
+  - name: ensure that required packages are installed
+    apt:
+      name: ['apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common']
+      state: latest
+  - name: gpg key check      
+    apt_key:
+      url: https://download.docker.com/linux/ubuntu/gpg
+      state: present
+  - name: add docker repo  
+    apt_repository:
+      repo: deb https://download.docker.com/linux/ubuntu xenial stable
+      update_cache: yes
+      state: present
+  - name: install docker  
+    apt:
+      name: docker-ce
+      state: present
+  - name: install docker for python
+    pip:
+      name: docker
+      state: present     
+  - name: install docker-compose
+    pip:
+      name: docker-compose
+      state: present 
+  - name: Start and enable Docker service
+    service: 
+      name: docker
+      state: started
+      enabled: yes
+  - name: Ensure docker group exists
+    group:
+      name: docker
+      state: present       
+  - name: Add the user to docker group
+    user:
+      name: vagrant
+      groups: docker
+      append: yes
+  - name: Clone CKAN     
+    git:
+      repo: https://github.com/ckan/ckan.git
+      dest: "{{ ckan_dir }}"
+      clone: yes   
+  - name: Copying default envs from template
+    copy:
+      src: "{{ ckan_dir }}/contrib/docker/.env.template"
+      dest: "{{ ckan_dir }}/contrib/docker/.env"
+  - name: Start docker-compose
+    docker_service:
+      project_src: "{{ ckan_dir }}/contrib/docker/"
+      state: present
+      build: yes
+  - name: wait for ckan  
+    wait_for:
+      timeout: 60
+    when: initial_setup
+  - name: restart ckan container
+    docker_service:
+      project_src: "{{ ckan_dir }}/contrib/docker/"
+      services:
+        - ckan
+      restarted: true
+      state: present
+    when: initial_setup
+  - name: db initialize
+    shell: 'docker exec ckan /usr/local/bin/ckan-paster --plugin=ckan datastore set-permissions -c /etc/ckan/production.ini | docker exec -i db psql -U ckan'       
+  - name: Check ckan config volume
+    docker_volume:
+      name: docker_ckan_config
+    register: volume_info  
+  - name: datapusher enable
+    replace:
+      dest: "{{ volume_info.ansible_facts.docker_volume.Mountpoint }}/production.ini"
+      regexp: '#ckan.datapusher.formats'
+      replace: 'ckan.datapusher.formats'    
+  - name: add plugin 
+    replace:
+      dest: "{{ volume_info.ansible_facts.docker_volume.Mountpoint }}/production.ini"
+      regexp: 'ckan.plugins = (?!datastore|datapusher)'
+      replace: "ckan.plugins = datastore datapusher "
+  - name: restart ckan container
+    docker_service:
+      project_src: "{{ ckan_dir }}/contrib/docker/"
+      services:
+        - ckan
+      restarted: true
+      state: present
+  - name: Start Jenkins in container
+    docker_container:
+      image: jenkins/jenkins:lts
+      name: jenkins
+      state: started
+      volumes: jenkins_home:/var/jenkins_home
+      published_ports: 8080:8080, 50000:50000
+      network_mode: host
+    register: jenkins_info
+    when: initial_setup
+  - name: Copy Jenkins config
+    shell: "cp -r /vagrant/_data/. {{ jenkins_info.ansible_facts.docker_container.Mounts[0].Source }}"
+    when: initial_setup
