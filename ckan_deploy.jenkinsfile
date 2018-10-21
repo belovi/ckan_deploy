@@ -1,0 +1,19 @@
+pipeline {
+parameters {
+  string defaultValue: '/home/vagrant/inventory', description: 'path to inventory file', name: 'INVENTORY', trim: false
+  string defaultValue: '/home/vagrant/ckan2.yml', description: 'path to playbook file', name: 'PLAYBOOK', trim: false
+  string defaultValue: '/home/vagrant/ckan', description: 'path to ckan deployment directory', name: 'CKAN_DIR', trim: false
+  }
+
+        agent { label 'testlab' }
+
+        stages {
+            stage ('Deploy CKAN') {
+                steps {
+                    script {
+                        sh "ansible-playbook ${PLAYBOOK} -i ${INVENTORY}"
+                    }
+                }
+            }
+        }
+    }
