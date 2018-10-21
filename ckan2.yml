@@ -120,3 +120,8 @@
   - name: Copy Jenkins config
     shell: "cp -r /vagrant/_data/. {{ jenkins_info.ansible_facts.docker_container.Mounts[0].Source }}"
     when: initial_setup
+  - name: Restart Jenkins
+    docker_container:
+      name: jenkins
+      state: started
+      restart: yes
