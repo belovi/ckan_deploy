@@ -11,7 +11,7 @@ parameters {
             stage ('Deploy CKAN') {
                 steps {
                     script {
-                        sh "ansible-playbook ${PLAYBOOK} -i ${INVENTORY}"
+                        sh "ansible-playbook ${PLAYBOOK} -i ${INVENTORY} --extra-vars \"ckan_dir=${CKAN_DIR} initial_setup=False\""
                     }
                 }
             }
