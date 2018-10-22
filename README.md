@@ -11,7 +11,7 @@ You need to install Vagrant and VirtualBox:
 https://www.vagrantup.com/
 https://www.virtualbox.org/
 # How to run
-- Go to choosen directory n your host 
+- Go to choosen directory on your host 
 - Run vagrant init at this directory. Vagrant will create Vagrantfile in this directory (https://www.vagrantup.com/intro/getting-started/project_setup.html)
 - Clone this repository in this directory replacing Vagrantfile 
 - Run 'vagrant up' from this directory
@@ -29,5 +29,5 @@ https://www.virtualbox.org/
 # If something go wrong
 - You can connect to "testlab" virtual machine under "vagrant" username using private key from vagrant init directory (.vagrant\machines\default\virtualbox\private_key) 
 - To fix errors which can occur during provisioning process just run ansible playbook again:
-  ansible-playbook ckan2.yml -i inventory -vv
+  *ansible-playbook ckan2.yml -i inventory -vv*
   from vagrant home directory
