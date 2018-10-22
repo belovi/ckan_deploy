@@ -29,5 +29,7 @@ https://www.virtualbox.org/
 # If something go wrong
 - You can connect to "testlab" virtual machine under "vagrant" username using private key from vagrant init directory (.vagrant\machines\default\virtualbox\private_key) 
 - To fix errors which can occur during provisioning process just run ansible playbook again:
+
   *ansible-playbook ckan2.yml -i inventory -vv*
+  
   from vagrant home directory
